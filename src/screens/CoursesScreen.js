@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BookOpen, Search, Code, LayoutGrid, Zap, Home, ChevronRight } from 'lucide-react';
-import { courseData } from '../data/constants'; // Importamos la data
+import { courseData, colors } from '../data/constants.js'; // Importamos la data
 import CourseDetailScreen from './CourseDetailScreen'; // Importamos el detalle
 import EnrollmentForm from './EnrollmentForm'; // Importamos el formulario
 
