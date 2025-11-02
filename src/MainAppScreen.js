@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import BottomNavBar from './components/BottomNavBar';
-import WorklyLogo from './components/WorklyLogo';
-import HomeScreen from './screens/HomeScreen';
-import JobsScreen from './screens/JobsScreen';
-import CoursesScreen from './screens/CoursesScreen';
-import ProfileScreen from './screens/ProfileScreen';
+import BottomNavBar from 'src/components/BottomNavBar';
+import WorklyLogo from 'src/components/WorklyLogo';
+import HomeScreen from 'src/screens/HomeScreen';
+import JobsScreen from 'src/screens/JobsScreen';
+import CoursesScreen from 'src/screens/CoursesScreen';
+import ProfileScreen from 'src/screens/ProfileScreen';
 
 // --- Pantalla 2: Aplicación Principal (MainAppScreen) ---
 const MainAppScreen = ({ user, onLogout }) => {
