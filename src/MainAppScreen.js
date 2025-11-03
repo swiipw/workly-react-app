@@ -14,16 +14,15 @@ const MainAppScreen = ({ user, onLogout }) => {
   const renderContent = () => {
     switch (activeTab) {
       case 'home':
-        return <HomeScreen user={user} />;
+        return (<HomeScreen user={user} />); // <- Paréntesis añadidos/reafirmados
       case 'jobs':
-        return <JobsScreen />;
+        return (<JobsScreen />); // <- Paréntesis añadidos/reafirmados
       case 'courses':
-        // Mantenemos el user aquí, pero recuerda que el Context API centralizará data estática
-        return <CoursesScreen onSelectCourse={user} />;
+        return (<CoursesScreen onSelectCourse={user} />); // <- Paréntesis añadidos/reafirmados
       case 'profile':
-        return <ProfileScreen user={user} onLogout={onLogout} />;
+        return (<ProfileScreen user={user} onLogout={onLogout} />); // <- Paréntesis añadidos/reafirmados
       default:
-        return <HomeScreen user={user} />;
+        return (<HomeScreen user={user} />); // <- Paréntesis añadidos/reafirmados
     }
   };
     
