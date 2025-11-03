@@ -1,5 +1,7 @@
 import React from 'react';
 import { User, Zap, Code, LayoutGrid, DollarSign } from 'lucide-react';
+// Importamos la imagen del asistente. La ruta es ../assets porque HomeScreen está en src/screens
+import AsistenteImg from '../assets/asistente_workly.jpg'; // 👈 NUEVA IMPORTACIÓN DE IMAGEN
 
 // --- Componente Auxiliar: SkillPill (Ícono + Texto) ---
 const SkillPill = ({ icon: Icon, text, colorClass }) => (
@@ -32,9 +34,13 @@ const HomeScreen = ({ user }) => {
                     <p className="text-gray-300 pt-2">Tu mapa de ruta hacia el futuro digital.</p>
                 </div>
                 
-                {/* Asistente Josué (Simulación de imagen) */}
-                <div className="absolute right-[-10px] bottom-0 w-24 h-24 bg-[#1ABC9C]/50 rounded-full flex items-center justify-center animate-bounce z-0">
-                    <User size={40} className="text-white" />
+                {/* Asistente (Imagen Reemplazada) */}
+                <div className="absolute right-[-10px] bottom-0 w-32 h-32 flex items-center justify-center animate-bounce z-0">
+                    <img
+                        src={AsistenteImg}
+                        alt="Asistente Virtual Workly"
+                        className="w-full h-full object-cover rounded-full p-1" // Estilos para que la imagen se adapte y tenga forma circular
+                    />
                 </div>
             </div>
 
