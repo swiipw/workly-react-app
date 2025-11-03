@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LoginScreen from 'screens/LoginScreen';
+import LoginScreen from './screens/LoginScreen';
 import MainAppScreen from './MainAppScreen'; 
 import { AppProvider } from './context/AppContext'; // 
 
