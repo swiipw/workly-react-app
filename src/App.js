@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import LoginScreen from './screens/LoginScreen';
 import MainAppScreen from './MainAppScreen'; 
-import { AppProvider } from './context/AppContext'; // 
+import { AppProvider } from './context/AppContext'; 
 
 // --- Componente Principal: App ---
 function AppContent() {
   const [user, setUser] = useState(null);
 
   if (user) {
-    return <MainAppScreen user={user} onLogout={() => setUser(null)} />;
+    // Retorno envuelto en paréntesis para mayor seguridad sintáctica
+    return (
+      <MainAppScreen user={user} onLogout={() => setUser(null)} />
+    );
   } else {
-    return <LoginScreen onLogin={(userData) => setUser(userData)} />;
+    // Retorno envuelto en paréntesis para mayor seguridad sintáctica
+    return (
+      <LoginScreen onLogin={(userData) => setUser(userData)} />
+    );
   }
 }
 
@@ -22,7 +28,6 @@ export default function App() {
         </AppProvider>
     );
 }
-
 
 // --- Configuración de Tailwind para la paleta de colores (Mantenemos esto aquí) ---
 window.tailwind.config = {
