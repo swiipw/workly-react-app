@@ -4,7 +4,7 @@ import WorklyLogo from '../components/WorklyLogo';
 import PrimaryButton from '../components/PrimaryButton'; 
 
 // --- Pantalla 1: Inicio de Sesión (LoginScreen) ---
-const LoginScreen = ({ onLogin }) => { // Sintaxis limpia para evitar el error (8:47)
+const LoginScreen = ({ onLogin }) => { // Declaración limpia
   const [email, setEmail] = useState(''); 
   const [password, setPassword] = useState(''); 
   const [isLoading, setIsLoading] = useState(false);
@@ -82,7 +82,6 @@ const LoginScreen = ({ onLogin }) => { // Sintaxis limpia para evitar el error (
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-[#1ABC9C] focus:border-[#1ABC9C] transition duration-150"
               />
             </div>
-    
           </div> 
 
           {error && (
