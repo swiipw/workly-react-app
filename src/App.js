@@ -3,7 +3,7 @@ import LoginScreen from './screens/LoginScreen';
 import MainAppScreen from './MainAppScreen'; 
 import { AppProvider } from './context/AppContext'; 
 
-// --- Componente Principal: App ---
+// --- Componente Auxiliar: AppContent ---
 function AppContent() {
   const [user, setUser] = useState(null);
 
@@ -20,7 +20,7 @@ function AppContent() {
   }
 }
 
-// NUEVO: La función App principal ahora envuelve el contenido con el Context Provider
+// --- Componente Principal: App ---
 export default function App() {
     return (
         <AppProvider>
@@ -29,7 +29,7 @@ export default function App() {
     );
 }
 
-// --- Configuración de Tailwind para la paleta de colores (Mantenemos esto aquí) ---
+// --- Configuración de Tailwind (mantener sin cambios) ---
 window.tailwind.config = {
   theme: {
     extend: {
