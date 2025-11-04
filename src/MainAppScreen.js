@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// Corregidas las rutas de importación de componentes (están en la misma carpeta src/)
 import BottomNavBar from './components/BottomNavBar';
 import WorklyLogo from './components/WorklyLogo';
 import HomeScreen from './screens/HomeScreen';
@@ -14,15 +13,15 @@ const MainAppScreen = ({ user, onLogout }) => {
   const renderContent = () => {
     switch (activeTab) {
       case 'home':
-        return (<HomeScreen user={user} />); // <- Paréntesis añadidos/reafirmados
+        return (<HomeScreen user={user} />); // Paréntesis asegurados
       case 'jobs':
-        return (<JobsScreen />); // <- Paréntesis añadidos/reafirmados
+        return (<JobsScreen />); // Paréntesis asegurados. Verifica que la clave sea 'jobs' sin espacios.
       case 'courses':
-        return (<CoursesScreen onSelectCourse={user} />); // <- Paréntesis añadidos/reafirmados
+        return (<CoursesScreen onSelectCourse={user} />); 
       case 'profile':
-        return (<ProfileScreen user={user} onLogout={onLogout} />); // <- Paréntesis añadidos/reafirmados
+        return (<ProfileScreen user={user} onLogout={onLogout} />); 
       default:
-        return (<HomeScreen user={user} />); // <- Paréntesis añadidos/reafirmados
+        return (<HomeScreen user={user} />); 
     }
   };
     
